@@ -86,7 +86,7 @@ def update_record(request, pk):
                 form.save()
                 messages.success(request, 'Record updated successfully.')
             return redirect('home')
-        return render(request, 'add_record.html', {'form': form})
+        return render(request, 'update_record.html', {'form': form})
     else:
         messages.error(request, 'You need to be logged in to update a record.')
         return redirect('home')
